@@ -16,8 +16,9 @@ public class MainFrame extends JFrame{
 	public MainFrame() {
 		container = new JPanel(new CardLayout());
 		
-		container.add(new LoginView(), "Login");
-
+//		container.add(new LoginView(), "Login");
+		container.add(new UserOrderScreen(), "User Order Screen");
+		
 		getContentPane().add(container, BorderLayout.CENTER);
 	}
 }

@@ -48,5 +48,6 @@ public class LoginView extends JPanel{
 		this.add(loginButton);
 		
 	}
+	
 
 }
