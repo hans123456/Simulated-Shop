@@ -1,9 +1,11 @@
-package ui;
 
+
+import java.awt.CardLayout;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
@@ -20,7 +22,7 @@ public class LoginView extends JPanel{
 	
 	private JTextField userTextField;
 	
-	public LoginView (){
+	public LoginView (final JPanel container, ShopDatabase shopdb){
 		
 		this.setLayout(null);
 		
@@ -38,6 +40,17 @@ public class LoginView extends JPanel{
 		
 		loginButton = new JButton("Login");
 		loginButton.setBounds(10, 80, 80, 25);
+	
+		loginButton.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				User user = new User(userTextField.getText());
+				shopdb.login(user);
+				CardLayout c = (CardLayout) container.getLayout(); 
+				c.show(container, "User Order Screen");
+			}
+			
+		});
 		
 		this.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
 		
@@ -49,5 +62,4 @@ public class LoginView extends JPanel{
 		
 	}
 	
-
 }

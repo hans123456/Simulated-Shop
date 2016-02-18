@@ -3,8 +3,6 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
-import ui.MainFrame;
-
 public class Driver {
 
 	public static void main(String[] args) {
@@ -14,7 +12,7 @@ public class Driver {
 		adminScreen.setShopDB(shopDB);
 		adminScreen.setVisible(true);
 
-		JFrame frame = new MainFrame();
+		JFrame frame = new MainFrame(shopDB);
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(Toolkit.getDefaultToolkit().getScreenSize().width,

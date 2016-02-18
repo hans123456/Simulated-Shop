@@ -1,4 +1,4 @@
-package ui;
+
 
 import java.awt.Toolkit;
 
@@ -26,7 +26,7 @@ public class UserOrderScreen extends JPanel {
 	
 	private JScrollPane scrollPane;
 	
-	public UserOrderScreen() {
+	public UserOrderScreen(final JPanel container) {
 		
 		this.setLayout(null);
 		

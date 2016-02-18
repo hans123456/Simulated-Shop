@@ -12,8 +12,9 @@ public class ShopDatabase {
 		this.products_ = new HashMap<String, Product>();
 	}
 
-	public boolean login(String username) {
-		return users_.containsKey(username);
+	public void login(User user) {
+		
+		users_.put(user.getUsername(), user);
 	}
 
 	public User getUser(String username) {

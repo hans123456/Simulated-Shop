@@ -1,4 +1,4 @@
-package ui;
+
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
@@ -13,11 +13,11 @@ public class MainFrame extends JFrame{
 
 	private JPanel container;
 	
-	public MainFrame() {
+	public MainFrame(ShopDatabase shopdb) {
 		container = new JPanel(new CardLayout());
 		
-//		container.add(new LoginView(), "Login");
-		container.add(new UserOrderScreen(), "User Order Screen");
+		container.add(new LoginView(container, shopdb), "Login");
+		container.add(new UserOrderScreen(container), "User Order Screen");
 		
 		getContentPane().add(container, BorderLayout.CENTER);
 	}
