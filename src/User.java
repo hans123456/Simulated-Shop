@@ -22,8 +22,12 @@ public class User {
 		return money_;
 	}
 
-	public void subtractMoney(int money) {
-		this.money_ -= money;
+	public boolean subtractMoney(int money) {
+		if (this.money_ - money >= 0) {
+			this.money_ -= money;
+			return true;
+		}
+		return false;
 	}
 
 	public List<Product> getProducts() {
