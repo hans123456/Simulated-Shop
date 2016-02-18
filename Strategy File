@@ -1,0 +1,16 @@
+Members:
+Chua, Hans
+Cu, Geraldine
+Paguiligan, Moira
+
+strategy 	- phased
+	- per module
+	- incremental
+
+task per member
+	Hans - All Model class,  Admin screen and controller
+	Geraldine - Login UI and controller, UserOrderScreen UI
+	Moira - Login UI and controller, UserOrderScreenUI
+
+
+
