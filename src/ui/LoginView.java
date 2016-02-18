@@ -1,5 +1,7 @@
 package ui;
 
+import java.awt.Toolkit;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -23,7 +25,7 @@ public class LoginView extends JPanel{
 		this.setLayout(null);
 		
 		userLabel = new JLabel("User: ");
-		userLabel.setBounds(10, 40, 80, 25);
+		userLabel.setBounds(10, 10, 80, 25);
 		
 		pwLabel = new JLabel("Password: ");
 		pwLabel.setBounds(10, 40, 80, 25);
@@ -37,11 +39,14 @@ public class LoginView extends JPanel{
 		loginButton = new JButton("Login");
 		loginButton.setBounds(10, 80, 80, 25);
 		
+		this.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
+		
 		this.add(userLabel);
 		this.add(userTextField);
 		this.add(pwLabel);
 		this.add(pwField);
 		this.add(loginButton);
+		
 	}
 
 }
